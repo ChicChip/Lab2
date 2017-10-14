@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN" 
+"http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+    <include file="struts-default.xml"/>
+    <package name="lab2"  extends="struts-default">
+        <action name="authorQuery" class="lab2.Action" method = "Query">
+            <result name="Success">/authorBook.jsp</result> 
+            <result name="Fail">/Fail.jsp</result>
+        </action>
+        <action name="addBook" class="lab2.Action" method = "addBook">
+            <result name="Success">/Success.jsp</result> 
+            <result name="Add">/upAuthor.jsp</result>
+            <result name="Fail">/Fail.jsp</result> 
+        </action>
+        <action name="information" class="lab2.Action" method = "Show">
+            <result name="Success">/information.jsp</result> 
+            <result name="Fail">/Fail.jsp</result>  
+        </action>
+        <action name="addAuthor" class="lab2.Action" method = "addAuthor">
+            <result name="Success">/Success.jsp</result> 
+            <result name="Fail">/Fail.jsp</result>  
+        </action>
+        <action name="upAuthor" class="lab2.Action" method = "upAuthor">
+            <result name="Success">/Success.jsp</result> 
+            <result name="Fail">/Fail.jsp</result>  
+        </action>
+        <action name="delete" class="lab2.Action" method = "bookDelete">
+            <result name="Success">/Success.jsp</result> 
+            <result name="Fail">/Fail.jsp</result>  
+        </action>
+        <action name="update" class="lab2.Action" method = "Update">
+            <result name="Success">/Success.jsp</result>
+            <result name="Add">/addAuthor.jsp</result> 
+            <result name="Fail">/Fail.jsp</result>  
+        </action>
+        <action name="edit" class="lab2.Action" method = "gotoUpdate">
+            <result name="Success">/Update.jsp</result>
+        </action>
+        <action name="allBook" class="lab2.Action" method = "showAll">
+            <result name="Success">/allBook.jsp</result>
+            <result name="Fail">/Fail.jsp</result>
+        </action>
+    </package>
+</struts>
